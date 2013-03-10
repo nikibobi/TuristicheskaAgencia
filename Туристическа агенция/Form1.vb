@@ -8,6 +8,7 @@
     Dim DateEnd(40) As Date
     Dim Transport(40) As String
     Dim Price(40) As Double
+    Dim Discount As Double
 
     Dim K As Integer
     Dim I As Integer
@@ -53,7 +54,23 @@
     End Sub
 
     Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnAdd.Click
+        For n = 0 To K
+            If cmbDestinationRez.Text = Country(n) Then
+                I = n
+            End If
+        Next
 
+        If Val(txtNumReservations.Text) >= 5 Then
+            Discount = 0.15
+        ElseIf Val(txtNumReservations.Text) >= 3 Then
+            Discount = 0.1
+        ElseIf Val(txtNumReservations.Text) >= 2 Then
+            Discount = 0.05
+        Else
+            Discount = 1
+        End If
+
+        lblPrice.Text = String.Format("Цена: {1}{0}Отстъпка:{2}%{0}Крайна Цена:{3}{0}", vbNewLine, Price(I), Discount * 100, Price(I) - (Price(I) * Discount))
     End Sub
 
     Private Sub cmbContinentRez_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbContinentRez.SelectedIndexChanged
@@ -72,10 +89,6 @@
                 I = n
             End If
         Next
-        lblDestinationInfoRez.Text = String.Format("Описание: {1}{0}Начална дата: {2:d}{0}Крайна дата: {3:d}{0}Дни: {4}{0}Вид транспорт: {5}{0}Цена: {6:c}", vbNewLine, Description(I), DateBegin(I), DateEnd(I), Days(I), Transport(I), Price(I))
-    End Sub
-
-    Private Sub lboxReservations_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
+        lblDestinationInfoRez.Text = String.Format("Описание: {1}{0}Начална дата: {2:d}{0}Вид транспорт: {3}{0}Цена за транспорт: {4:c}", vbNewLine, Description(I), DateBegin(I), Transport(I), Price(I))
     End Sub
 End Class

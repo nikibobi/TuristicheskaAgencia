@@ -51,9 +51,12 @@ Partial Class frmTouristAgency
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNumReservations = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblPrice = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tpTrips.SuspendLayout()
         Me.tpReservations.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -108,6 +111,7 @@ Partial Class frmTouristAgency
         '
         'tpReservations
         '
+        Me.tpReservations.Controls.Add(Me.GroupBox1)
         Me.tpReservations.Controls.Add(Me.txtNumReservations)
         Me.tpReservations.Controls.Add(Me.Label3)
         Me.tpReservations.Controls.Add(Me.lblEndDate)
@@ -183,7 +187,7 @@ Partial Class frmTouristAgency
         'rbAmazonPay
         '
         Me.rbAmazonPay.AutoSize = True
-        Me.rbAmazonPay.Location = New System.Drawing.Point(187, 345)
+        Me.rbAmazonPay.Location = New System.Drawing.Point(26, 389)
         Me.rbAmazonPay.Name = "rbAmazonPay"
         Me.rbAmazonPay.Size = New System.Drawing.Size(81, 17)
         Me.rbAmazonPay.TabIndex = 13
@@ -193,7 +197,7 @@ Partial Class frmTouristAgency
         'rbGoogleWallet
         '
         Me.rbGoogleWallet.AutoSize = True
-        Me.rbGoogleWallet.Location = New System.Drawing.Point(92, 345)
+        Me.rbGoogleWallet.Location = New System.Drawing.Point(26, 368)
         Me.rbGoogleWallet.Name = "rbGoogleWallet"
         Me.rbGoogleWallet.Size = New System.Drawing.Size(89, 17)
         Me.rbGoogleWallet.TabIndex = 12
@@ -296,7 +300,7 @@ Partial Class frmTouristAgency
         'lblEndDate
         '
         Me.lblEndDate.AutoSize = True
-        Me.lblEndDate.Location = New System.Drawing.Point(23, 205)
+        Me.lblEndDate.Location = New System.Drawing.Point(23, 254)
         Me.lblEndDate.Name = "lblEndDate"
         Me.lblEndDate.Size = New System.Drawing.Size(39, 13)
         Me.lblEndDate.TabIndex = 21
@@ -327,6 +331,26 @@ Partial Class frmTouristAgency
         Me.txtNumReservations.Size = New System.Drawing.Size(152, 20)
         Me.txtNumReservations.TabIndex = 23
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.lblPrice)
+        Me.GroupBox1.Location = New System.Drawing.Point(198, 329)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(171, 76)
+        Me.GroupBox1.TabIndex = 24
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Цена"
+        '
+        'lblPrice
+        '
+        Me.lblPrice.AutoSize = True
+        Me.lblPrice.Location = New System.Drawing.Point(44, 20)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(39, 13)
+        Me.lblPrice.TabIndex = 0
+        Me.lblPrice.Text = "Label1"
+        Me.lblPrice.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'frmTouristAgency
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -342,6 +366,8 @@ Partial Class frmTouristAgency
         Me.tpTrips.PerformLayout()
         Me.tpReservations.ResumeLayout(False)
         Me.tpReservations.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -373,5 +399,7 @@ Partial Class frmTouristAgency
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents lblEndDate As System.Windows.Forms.Label
     Friend WithEvents txtDuration As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents lblPrice As System.Windows.Forms.Label
 
 End Class
