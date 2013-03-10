@@ -25,10 +25,17 @@ Partial Class frmTouristAgency
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTouristAgency))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpTrips = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblResult = New System.Windows.Forms.Label()
         Me.cmbDestination = New System.Windows.Forms.ComboBox()
         Me.cmbContinent = New System.Windows.Forms.ComboBox()
         Me.tpReservations = New System.Windows.Forms.TabPage()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblPrice = New System.Windows.Forms.Label()
+        Me.txtNumReservations = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblEndDate = New System.Windows.Forms.Label()
+        Me.txtDuration = New System.Windows.Forms.TextBox()
         Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
         Me.lblDestinationInfoRez = New System.Windows.Forms.Label()
         Me.lblPaymentOption = New System.Windows.Forms.Label()
@@ -46,13 +53,6 @@ Partial Class frmTouristAgency
         Me.lblPhone = New System.Windows.Forms.Label()
         Me.lblSurname = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
-        Me.txtDuration = New System.Windows.Forms.TextBox()
-        Me.lblEndDate = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtNumReservations = New System.Windows.Forms.TextBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lblPrice = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tpTrips.SuspendLayout()
         Me.tpReservations.SuspendLayout()
@@ -78,10 +78,19 @@ Partial Class frmTouristAgency
         Me.tpTrips.Location = New System.Drawing.Point(4, 22)
         Me.tpTrips.Name = "tpTrips"
         Me.tpTrips.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpTrips.Size = New System.Drawing.Size(460, 316)
+        Me.tpTrips.Size = New System.Drawing.Size(460, 412)
         Me.tpTrips.TabIndex = 0
         Me.tpTrips.Text = "Екскурции"
         Me.tpTrips.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(37, 27)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(213, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Моля изберете континент и дестинация:"
         '
         'lblResult
         '
@@ -140,6 +149,57 @@ Partial Class frmTouristAgency
         Me.tpReservations.TabIndex = 1
         Me.tpReservations.Text = "Резервации"
         Me.tpReservations.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.lblPrice)
+        Me.GroupBox1.Location = New System.Drawing.Point(198, 329)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(171, 76)
+        Me.GroupBox1.TabIndex = 24
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Цена"
+        '
+        'lblPrice
+        '
+        Me.lblPrice.AutoSize = True
+        Me.lblPrice.Location = New System.Drawing.Point(6, 20)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(39, 13)
+        Me.lblPrice.TabIndex = 0
+        Me.lblPrice.Text = "Label1"
+        '
+        'txtNumReservations
+        '
+        Me.txtNumReservations.Location = New System.Drawing.Point(287, 291)
+        Me.txtNumReservations.Name = "txtNumReservations"
+        Me.txtNumReservations.Size = New System.Drawing.Size(152, 20)
+        Me.txtNumReservations.TabIndex = 23
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(23, 118)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(213, 13)
+        Me.Label3.TabIndex = 22
+        Me.Label3.Text = "Моля изберете континент и дестинация:"
+        '
+        'lblEndDate
+        '
+        Me.lblEndDate.AutoSize = True
+        Me.lblEndDate.Location = New System.Drawing.Point(23, 254)
+        Me.lblEndDate.Name = "lblEndDate"
+        Me.lblEndDate.Size = New System.Drawing.Size(39, 13)
+        Me.lblEndDate.TabIndex = 21
+        Me.lblEndDate.Text = "Label1"
+        '
+        'txtDuration
+        '
+        Me.txtDuration.Location = New System.Drawing.Point(129, 291)
+        Me.txtDuration.Name = "txtDuration"
+        Me.txtDuration.Size = New System.Drawing.Size(152, 20)
+        Me.txtDuration.TabIndex = 20
         '
         'txtPhone
         '
@@ -289,67 +349,6 @@ Partial Class frmTouristAgency
         Me.lblName.Size = New System.Drawing.Size(29, 13)
         Me.lblName.TabIndex = 0
         Me.lblName.Text = "Име"
-        '
-        'txtDuration
-        '
-        Me.txtDuration.Location = New System.Drawing.Point(129, 291)
-        Me.txtDuration.Name = "txtDuration"
-        Me.txtDuration.Size = New System.Drawing.Size(152, 20)
-        Me.txtDuration.TabIndex = 20
-        '
-        'lblEndDate
-        '
-        Me.lblEndDate.AutoSize = True
-        Me.lblEndDate.Location = New System.Drawing.Point(23, 254)
-        Me.lblEndDate.Name = "lblEndDate"
-        Me.lblEndDate.Size = New System.Drawing.Size(39, 13)
-        Me.lblEndDate.TabIndex = 21
-        Me.lblEndDate.Text = "Label1"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(37, 27)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(213, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Моля изберете континент и дестинация:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(23, 118)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(213, 13)
-        Me.Label3.TabIndex = 22
-        Me.Label3.Text = "Моля изберете континент и дестинация:"
-        '
-        'txtNumReservations
-        '
-        Me.txtNumReservations.Location = New System.Drawing.Point(287, 291)
-        Me.txtNumReservations.Name = "txtNumReservations"
-        Me.txtNumReservations.Size = New System.Drawing.Size(152, 20)
-        Me.txtNumReservations.TabIndex = 23
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.lblPrice)
-        Me.GroupBox1.Location = New System.Drawing.Point(198, 329)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(171, 76)
-        Me.GroupBox1.TabIndex = 24
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Цена"
-        '
-        'lblPrice
-        '
-        Me.lblPrice.AutoSize = True
-        Me.lblPrice.Location = New System.Drawing.Point(44, 20)
-        Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(39, 13)
-        Me.lblPrice.TabIndex = 0
-        Me.lblPrice.Text = "Label1"
-        Me.lblPrice.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'frmTouristAgency
         '
