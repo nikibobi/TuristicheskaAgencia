@@ -30,16 +30,12 @@ Partial Class frmTouristAgency
         Me.cmbDestination = New System.Windows.Forms.ComboBox()
         Me.cmbContinent = New System.Windows.Forms.ComboBox()
         Me.tpReservations = New System.Windows.Forms.TabPage()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblPrice = New System.Windows.Forms.Label()
-        Me.txtNumReservations = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblEndDate = New System.Windows.Forms.Label()
-        Me.txtDuration = New System.Windows.Forms.TextBox()
         Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
         Me.lblDestinationInfoRez = New System.Windows.Forms.Label()
         Me.lblPaymentOption = New System.Windows.Forms.Label()
-        Me.cmbDateTime = New System.Windows.Forms.ComboBox()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.rbAmazonPay = New System.Windows.Forms.RadioButton()
         Me.rbGoogleWallet = New System.Windows.Forms.RadioButton()
@@ -53,10 +49,16 @@ Partial Class frmTouristAgency
         Me.lblPhone = New System.Windows.Forms.Label()
         Me.lblSurname = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
+        Me.dtpStartDate = New System.Windows.Forms.DateTimePicker()
+        Me.numDurations = New System.Windows.Forms.NumericUpDown()
+        Me.numReservations = New System.Windows.Forms.NumericUpDown()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tpTrips.SuspendLayout()
         Me.tpReservations.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        CType(Me.numDurations, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numReservations, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -120,15 +122,17 @@ Partial Class frmTouristAgency
         '
         'tpReservations
         '
-        Me.tpReservations.Controls.Add(Me.GroupBox1)
-        Me.tpReservations.Controls.Add(Me.txtNumReservations)
+        Me.tpReservations.Controls.Add(Me.lblPrice)
+        Me.tpReservations.Controls.Add(Me.Label4)
+        Me.tpReservations.Controls.Add(Me.Label1)
+        Me.tpReservations.Controls.Add(Me.numReservations)
+        Me.tpReservations.Controls.Add(Me.numDurations)
+        Me.tpReservations.Controls.Add(Me.dtpStartDate)
         Me.tpReservations.Controls.Add(Me.Label3)
         Me.tpReservations.Controls.Add(Me.lblEndDate)
-        Me.tpReservations.Controls.Add(Me.txtDuration)
         Me.tpReservations.Controls.Add(Me.txtPhone)
         Me.tpReservations.Controls.Add(Me.lblDestinationInfoRez)
         Me.tpReservations.Controls.Add(Me.lblPaymentOption)
-        Me.tpReservations.Controls.Add(Me.cmbDateTime)
         Me.tpReservations.Controls.Add(Me.btnAdd)
         Me.tpReservations.Controls.Add(Me.rbAmazonPay)
         Me.tpReservations.Controls.Add(Me.rbGoogleWallet)
@@ -150,56 +154,35 @@ Partial Class frmTouristAgency
         Me.tpReservations.Text = "Резервации"
         Me.tpReservations.UseVisualStyleBackColor = True
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.lblPrice)
-        Me.GroupBox1.Location = New System.Drawing.Point(198, 329)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(171, 76)
-        Me.GroupBox1.TabIndex = 24
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Цена"
-        '
         'lblPrice
         '
         Me.lblPrice.AutoSize = True
-        Me.lblPrice.Location = New System.Drawing.Point(6, 20)
+        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblPrice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblPrice.Location = New System.Drawing.Point(228, 345)
         Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(39, 13)
+        Me.lblPrice.Size = New System.Drawing.Size(45, 13)
         Me.lblPrice.TabIndex = 0
         Me.lblPrice.Text = "Label1"
-        '
-        'txtNumReservations
-        '
-        Me.txtNumReservations.Location = New System.Drawing.Point(287, 291)
-        Me.txtNumReservations.Name = "txtNumReservations"
-        Me.txtNumReservations.Size = New System.Drawing.Size(152, 20)
-        Me.txtNumReservations.TabIndex = 23
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label3.Location = New System.Drawing.Point(23, 118)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(213, 13)
+        Me.Label3.Size = New System.Drawing.Size(217, 13)
         Me.Label3.TabIndex = 22
-        Me.Label3.Text = "Моля изберете континент и дестинация:"
+        Me.Label3.Text = "Изберете континент и дестинация:"
         '
         'lblEndDate
         '
         Me.lblEndDate.AutoSize = True
-        Me.lblEndDate.Location = New System.Drawing.Point(23, 254)
+        Me.lblEndDate.Location = New System.Drawing.Point(23, 269)
         Me.lblEndDate.Name = "lblEndDate"
         Me.lblEndDate.Size = New System.Drawing.Size(39, 13)
         Me.lblEndDate.TabIndex = 21
         Me.lblEndDate.Text = "Label1"
-        '
-        'txtDuration
-        '
-        Me.txtDuration.Location = New System.Drawing.Point(129, 291)
-        Me.txtDuration.Name = "txtDuration"
-        Me.txtDuration.Size = New System.Drawing.Size(152, 20)
-        Me.txtDuration.TabIndex = 20
         '
         'txtPhone
         '
@@ -221,19 +204,12 @@ Partial Class frmTouristAgency
         'lblPaymentOption
         '
         Me.lblPaymentOption.AutoSize = True
+        Me.lblPaymentOption.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.lblPaymentOption.Location = New System.Drawing.Point(23, 329)
         Me.lblPaymentOption.Name = "lblPaymentOption"
-        Me.lblPaymentOption.Size = New System.Drawing.Size(154, 13)
+        Me.lblPaymentOption.Size = New System.Drawing.Size(180, 13)
         Me.lblPaymentOption.TabIndex = 16
         Me.lblPaymentOption.Text = "Изберете начин на плащане:"
-        '
-        'cmbDateTime
-        '
-        Me.cmbDateTime.FormattingEnabled = True
-        Me.cmbDateTime.Location = New System.Drawing.Point(287, 166)
-        Me.cmbDateTime.Name = "cmbDateTime"
-        Me.cmbDateTime.Size = New System.Drawing.Size(152, 21)
-        Me.cmbDateTime.TabIndex = 15
         '
         'btnAdd
         '
@@ -279,7 +255,7 @@ Partial Class frmTouristAgency
         'cmbDestinationRez
         '
         Me.cmbDestinationRez.FormattingEnabled = True
-        Me.cmbDestinationRez.Location = New System.Drawing.Point(287, 139)
+        Me.cmbDestinationRez.Location = New System.Drawing.Point(287, 134)
         Me.cmbDestinationRez.Name = "cmbDestinationRez"
         Me.cmbDestinationRez.Size = New System.Drawing.Size(152, 21)
         Me.cmbDestinationRez.TabIndex = 9
@@ -350,6 +326,47 @@ Partial Class frmTouristAgency
         Me.lblName.TabIndex = 0
         Me.lblName.Text = "Име"
         '
+        'dtpStartDate
+        '
+        Me.dtpStartDate.Location = New System.Drawing.Point(26, 246)
+        Me.dtpStartDate.Name = "dtpStartDate"
+        Me.dtpStartDate.Size = New System.Drawing.Size(200, 20)
+        Me.dtpStartDate.TabIndex = 25
+        '
+        'numDurations
+        '
+        Me.numDurations.Location = New System.Drawing.Point(287, 246)
+        Me.numDurations.Name = "numDurations"
+        Me.numDurations.Size = New System.Drawing.Size(120, 20)
+        Me.numDurations.TabIndex = 26
+        '
+        'numReservations
+        '
+        Me.numReservations.Location = New System.Drawing.Point(26, 306)
+        Me.numReservations.Name = "numReservations"
+        Me.numReservations.Size = New System.Drawing.Size(120, 20)
+        Me.numReservations.TabIndex = 27
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label1.Location = New System.Drawing.Point(23, 290)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(114, 13)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "Брой резервации:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label4.Location = New System.Drawing.Point(23, 230)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(219, 13)
+        Me.Label4.TabIndex = 29
+        Me.Label4.Text = "Изберете начална дата и брой дни:"
+        '
         'frmTouristAgency
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -365,8 +382,8 @@ Partial Class frmTouristAgency
         Me.tpTrips.PerformLayout()
         Me.tpReservations.ResumeLayout(False)
         Me.tpReservations.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        CType(Me.numDurations, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numReservations, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -385,7 +402,6 @@ Partial Class frmTouristAgency
     Friend WithEvents lblPhone As System.Windows.Forms.Label
     Friend WithEvents lblSurname As System.Windows.Forms.Label
     Friend WithEvents lblName As System.Windows.Forms.Label
-    Friend WithEvents cmbDateTime As System.Windows.Forms.ComboBox
     Friend WithEvents btnAdd As System.Windows.Forms.Button
     Friend WithEvents rbAmazonPay As System.Windows.Forms.RadioButton
     Friend WithEvents rbGoogleWallet As System.Windows.Forms.RadioButton
@@ -394,11 +410,13 @@ Partial Class frmTouristAgency
     Friend WithEvents lblPaymentOption As System.Windows.Forms.Label
     Friend WithEvents txtPhone As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txtNumReservations As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents lblEndDate As System.Windows.Forms.Label
-    Friend WithEvents txtDuration As System.Windows.Forms.TextBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents lblPrice As System.Windows.Forms.Label
+    Friend WithEvents dtpStartDate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents numReservations As System.Windows.Forms.NumericUpDown
+    Friend WithEvents numDurations As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 
 End Class

@@ -9,6 +9,7 @@
     Dim Transport(40) As String
     Dim Price(40) As Double
     Dim Discount As Double
+    Dim DaysRez As Integer
 
     Dim K As Integer
     Dim I As Integer
@@ -372,17 +373,17 @@
             End If
         Next
 
-        If Val(txtNumReservations.Text) >= 5 Then
+        If numReservations.Value >= 5 Then
             Discount = 0.15
-        ElseIf Val(txtNumReservations.Text) >= 3 Then
+        ElseIf numReservations.Value >= 3 Then
             Discount = 0.1
-        ElseIf Val(txtNumReservations.Text) >= 2 Then
+        ElseIf numReservations.Value >= 2 Then
             Discount = 0.05
         Else
             Discount = 1
         End If
 
-        lblPrice.Text = String.Format("Цена: {1:c}{0}Отстъпка:{2}%{0}Крайна Цена:{3:c}{0}", vbNewLine, Price(I), Discount * 100, Price(I) - (Price(I) * Discount))
+        lblPrice.Text = String.Format("Цена: {1:c}{0}Отстъпка:{2}%{0}Крайна Цена:{3:c}{0}", vbNewLine, Price(I) * numReservations.Value, Discount * 100, Price(I) * numReservations.Value - (Price(I) * numReservations.Value * Discount))
     End Sub
 
     Private Sub cmbContinentRez_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbContinentRez.SelectedIndexChanged
