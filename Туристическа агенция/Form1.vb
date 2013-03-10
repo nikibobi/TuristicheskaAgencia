@@ -75,7 +75,7 @@
         lblDestinationInfoRez.Text = String.Format("Описание: {1}{0}Начална дата: {2:d}{0}Крайна дата: {3:d}{0}Дни: {4}{0}Вид транспорт: {5}{0}Цена: {6:c}", vbNewLine, Description(I), DateBegin(I), DateEnd(I), Days(I), Transport(I), Price(I))
     End Sub
 
-    Private Sub lboxReservations_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lboxReservations.SelectedIndexChanged
+    Private Sub lboxReservations_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 End Class
