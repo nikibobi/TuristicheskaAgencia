@@ -70,7 +70,7 @@
             Discount = 1
         End If
 
-        lblPrice.Text = String.Format("Цена: {1}{0}Отстъпка:{2}%{0}Крайна Цена:{3}{0}", vbNewLine, Price(I), Discount * 100, Price(I) - (Price(I) * Discount))
+        lblPrice.Text = String.Format("Цена: {1:c}{0}Отстъпка:{2}%{0}Крайна Цена:{3:c}{0}", vbNewLine, Price(I), Discount * 100, Price(I) - (Price(I) * Discount))
     End Sub
 
     Private Sub cmbContinentRez_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbContinentRez.SelectedIndexChanged
