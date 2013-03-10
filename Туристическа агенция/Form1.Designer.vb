@@ -63,7 +63,7 @@ Partial Class frmTouristAgency
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(468, 342)
+        Me.TabControl1.Size = New System.Drawing.Size(468, 438)
         Me.TabControl1.TabIndex = 0
         '
         'tpTrips
@@ -132,7 +132,7 @@ Partial Class frmTouristAgency
         Me.tpReservations.Location = New System.Drawing.Point(4, 22)
         Me.tpReservations.Name = "tpReservations"
         Me.tpReservations.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpReservations.Size = New System.Drawing.Size(460, 316)
+        Me.tpReservations.Size = New System.Drawing.Size(460, 412)
         Me.tpReservations.TabIndex = 1
         Me.tpReservations.Text = "Резервации"
         Me.tpReservations.UseVisualStyleBackColor = True
@@ -157,7 +157,7 @@ Partial Class frmTouristAgency
         'lblPaymentOption
         '
         Me.lblPaymentOption.AutoSize = True
-        Me.lblPaymentOption.Location = New System.Drawing.Point(23, 232)
+        Me.lblPaymentOption.Location = New System.Drawing.Point(23, 329)
         Me.lblPaymentOption.Name = "lblPaymentOption"
         Me.lblPaymentOption.Size = New System.Drawing.Size(154, 13)
         Me.lblPaymentOption.TabIndex = 16
@@ -173,7 +173,7 @@ Partial Class frmTouristAgency
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(379, 286)
+        Me.btnAdd.Location = New System.Drawing.Point(379, 383)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 14
@@ -183,7 +183,7 @@ Partial Class frmTouristAgency
         'rbAmazonPay
         '
         Me.rbAmazonPay.AutoSize = True
-        Me.rbAmazonPay.Location = New System.Drawing.Point(187, 248)
+        Me.rbAmazonPay.Location = New System.Drawing.Point(187, 345)
         Me.rbAmazonPay.Name = "rbAmazonPay"
         Me.rbAmazonPay.Size = New System.Drawing.Size(81, 17)
         Me.rbAmazonPay.TabIndex = 13
@@ -193,7 +193,7 @@ Partial Class frmTouristAgency
         'rbGoogleWallet
         '
         Me.rbGoogleWallet.AutoSize = True
-        Me.rbGoogleWallet.Location = New System.Drawing.Point(92, 248)
+        Me.rbGoogleWallet.Location = New System.Drawing.Point(92, 345)
         Me.rbGoogleWallet.Name = "rbGoogleWallet"
         Me.rbGoogleWallet.Size = New System.Drawing.Size(89, 17)
         Me.rbGoogleWallet.TabIndex = 12
@@ -204,7 +204,7 @@ Partial Class frmTouristAgency
         '
         Me.rbPaypal.AutoSize = True
         Me.rbPaypal.Checked = True
-        Me.rbPaypal.Location = New System.Drawing.Point(26, 248)
+        Me.rbPaypal.Location = New System.Drawing.Point(26, 345)
         Me.rbPaypal.Name = "rbPaypal"
         Me.rbPaypal.Size = New System.Drawing.Size(58, 17)
         Me.rbPaypal.TabIndex = 11
@@ -288,7 +288,7 @@ Partial Class frmTouristAgency
         '
         'txtDuration
         '
-        Me.txtDuration.Location = New System.Drawing.Point(287, 198)
+        Me.txtDuration.Location = New System.Drawing.Point(129, 291)
         Me.txtDuration.Name = "txtDuration"
         Me.txtDuration.Size = New System.Drawing.Size(152, 20)
         Me.txtDuration.TabIndex = 20
@@ -322,7 +322,7 @@ Partial Class frmTouristAgency
         '
         'txtNumReservations
         '
-        Me.txtNumReservations.Location = New System.Drawing.Point(287, 224)
+        Me.txtNumReservations.Location = New System.Drawing.Point(287, 291)
         Me.txtNumReservations.Name = "txtNumReservations"
         Me.txtNumReservations.Size = New System.Drawing.Size(152, 20)
         Me.txtNumReservations.TabIndex = 23
@@ -331,10 +331,10 @@ Partial Class frmTouristAgency
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(492, 366)
+        Me.ClientSize = New System.Drawing.Size(492, 462)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(500, 400)
+        Me.MinimumSize = New System.Drawing.Size(500, 500)
         Me.Name = "frmTouristAgency"
         Me.Text = "Туристическа агенция"
         Me.TabControl1.ResumeLayout(False)
