@@ -397,8 +397,8 @@
             PaymentOption = "PayPal.com"
         End If
 
-        FileOpen(1, "..\reservations.txt", OpenMode.Output)
-        Print(1, String.Format("Име:{1}{0}Фамилия:{2}{0}Телефон:{3}{0}Адрес:{4}{0}Дестинация:{5}{0}Описание:{6}{0}Начална дата:{7}{0}Продължителност:{8}{0}Крайна дата:{9}{0}Брой ресервации:{10}{0}Начин на плащане:{11}{0}", vbNewLine, txtName.Text, txtSurname.Text, txtPhone.Text, txtAdress.Text, cmbDestinationRez.Text, Description(I), dtpStartDate.Text, numDurations.Value, lblEndDate.Text, numReservations.Value, PaymentOption))
+        FileOpen(1, "..\reservations.txt", OpenMode.Append)
+        Print(1, String.Format("Име: {1}{0}Фамилия: {2}{0}Телефон: {3}{0}Адрес: {4}{0}Дестинация: {5}{0}Описание: {6}{0}Начална дата: {7}{0}Продължителност: {8}{0}Крайна дата: {9}{0}Брой ресервации: {10}{0}Начин на плащане: {11}{0}", vbNewLine, txtName.Text, txtSurname.Text, txtPhone.Text, txtAdress.Text, cmbDestinationRez.Text, Description(I), dtpStartDate.Text, numDurations.Value, lblEndDate.Text, numReservations.Value, PaymentOption))
         FileClose(1)
     End Sub
 
