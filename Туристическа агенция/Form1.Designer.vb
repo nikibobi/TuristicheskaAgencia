@@ -42,9 +42,9 @@ Partial Class frmTouristAgency
         Me.lblDestinationInfoRez = New System.Windows.Forms.Label()
         Me.lblPaymentOption = New System.Windows.Forms.Label()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.rbAmazonPay = New System.Windows.Forms.RadioButton()
-        Me.rbGoogleWallet = New System.Windows.Forms.RadioButton()
-        Me.rbPaypal = New System.Windows.Forms.RadioButton()
+        Me.rbBankAccount = New System.Windows.Forms.RadioButton()
+        Me.rbCard = New System.Windows.Forms.RadioButton()
+        Me.rbCash = New System.Windows.Forms.RadioButton()
         Me.cmbDestinationRez = New System.Windows.Forms.ComboBox()
         Me.cmbContinentRez = New System.Windows.Forms.ComboBox()
         Me.txtAdress = New System.Windows.Forms.TextBox()
@@ -55,6 +55,8 @@ Partial Class frmTouristAgency
         Me.lblSurname = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.rbPayPal = New System.Windows.Forms.RadioButton()
+        Me.rb_ePay = New System.Windows.Forms.RadioButton()
         Me.TabControl1.SuspendLayout()
         Me.tpTrips.SuspendLayout()
         Me.tpReservations.SuspendLayout()
@@ -123,6 +125,8 @@ Partial Class frmTouristAgency
         '
         'tpReservations
         '
+        Me.tpReservations.Controls.Add(Me.rb_ePay)
+        Me.tpReservations.Controls.Add(Me.rbPayPal)
         Me.tpReservations.Controls.Add(Me.Label5)
         Me.tpReservations.Controls.Add(Me.lblPrice)
         Me.tpReservations.Controls.Add(Me.Label4)
@@ -136,9 +140,9 @@ Partial Class frmTouristAgency
         Me.tpReservations.Controls.Add(Me.lblDestinationInfoRez)
         Me.tpReservations.Controls.Add(Me.lblPaymentOption)
         Me.tpReservations.Controls.Add(Me.btnAdd)
-        Me.tpReservations.Controls.Add(Me.rbAmazonPay)
-        Me.tpReservations.Controls.Add(Me.rbGoogleWallet)
-        Me.tpReservations.Controls.Add(Me.rbPaypal)
+        Me.tpReservations.Controls.Add(Me.rbBankAccount)
+        Me.tpReservations.Controls.Add(Me.rbCard)
+        Me.tpReservations.Controls.Add(Me.rbCash)
         Me.tpReservations.Controls.Add(Me.cmbDestinationRez)
         Me.tpReservations.Controls.Add(Me.cmbContinentRez)
         Me.tpReservations.Controls.Add(Me.txtAdress)
@@ -161,7 +165,7 @@ Partial Class frmTouristAgency
         Me.lblPrice.AutoSize = True
         Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.lblPrice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblPrice.Location = New System.Drawing.Point(228, 345)
+        Me.lblPrice.Location = New System.Drawing.Point(249, 345)
         Me.lblPrice.Name = "lblPrice"
         Me.lblPrice.Size = New System.Drawing.Size(45, 13)
         Me.lblPrice.TabIndex = 0
@@ -232,6 +236,7 @@ Partial Class frmTouristAgency
         Me.txtPhone.Location = New System.Drawing.Point(80, 65)
         Me.txtPhone.Mask = "0000000000"
         Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.txtPhone.Size = New System.Drawing.Size(236, 20)
         Me.txtPhone.TabIndex = 19
         '
@@ -263,37 +268,37 @@ Partial Class frmTouristAgency
         Me.btnAdd.Text = "Добави"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'rbAmazonPay
+        'rbBankAccount
         '
-        Me.rbAmazonPay.AutoSize = True
-        Me.rbAmazonPay.Location = New System.Drawing.Point(26, 389)
-        Me.rbAmazonPay.Name = "rbAmazonPay"
-        Me.rbAmazonPay.Size = New System.Drawing.Size(81, 17)
-        Me.rbAmazonPay.TabIndex = 13
-        Me.rbAmazonPay.Text = "AmazonPay"
-        Me.rbAmazonPay.UseVisualStyleBackColor = True
+        Me.rbBankAccount.AutoSize = True
+        Me.rbBankAccount.Location = New System.Drawing.Point(26, 389)
+        Me.rbBankAccount.Name = "rbBankAccount"
+        Me.rbBankAccount.Size = New System.Drawing.Size(85, 17)
+        Me.rbBankAccount.TabIndex = 13
+        Me.rbBankAccount.Text = "Банков Път"
+        Me.rbBankAccount.UseVisualStyleBackColor = True
         '
-        'rbGoogleWallet
+        'rbCard
         '
-        Me.rbGoogleWallet.AutoSize = True
-        Me.rbGoogleWallet.Location = New System.Drawing.Point(26, 368)
-        Me.rbGoogleWallet.Name = "rbGoogleWallet"
-        Me.rbGoogleWallet.Size = New System.Drawing.Size(89, 17)
-        Me.rbGoogleWallet.TabIndex = 12
-        Me.rbGoogleWallet.Text = "GoogleWallet"
-        Me.rbGoogleWallet.UseVisualStyleBackColor = True
+        Me.rbCard.AutoSize = True
+        Me.rbCard.Location = New System.Drawing.Point(26, 368)
+        Me.rbCard.Name = "rbCard"
+        Me.rbCard.Size = New System.Drawing.Size(64, 17)
+        Me.rbCard.TabIndex = 12
+        Me.rbCard.Text = "С карта"
+        Me.rbCard.UseVisualStyleBackColor = True
         '
-        'rbPaypal
+        'rbCash
         '
-        Me.rbPaypal.AutoSize = True
-        Me.rbPaypal.Checked = True
-        Me.rbPaypal.Location = New System.Drawing.Point(26, 345)
-        Me.rbPaypal.Name = "rbPaypal"
-        Me.rbPaypal.Size = New System.Drawing.Size(58, 17)
-        Me.rbPaypal.TabIndex = 11
-        Me.rbPaypal.TabStop = True
-        Me.rbPaypal.Text = "PayPal"
-        Me.rbPaypal.UseVisualStyleBackColor = True
+        Me.rbCash.AutoSize = True
+        Me.rbCash.Checked = True
+        Me.rbCash.Location = New System.Drawing.Point(26, 345)
+        Me.rbCash.Name = "rbCash"
+        Me.rbCash.Size = New System.Drawing.Size(50, 17)
+        Me.rbCash.TabIndex = 11
+        Me.rbCash.TabStop = True
+        Me.rbCash.Text = "Брой"
+        Me.rbCash.UseVisualStyleBackColor = True
         '
         'cmbDestinationRez
         '
@@ -379,6 +384,28 @@ Partial Class frmTouristAgency
         Me.Label5.TabIndex = 30
         Me.Label5.Text = "(крайна дата)"
         '
+        'rbPayPal
+        '
+        Me.rbPayPal.AutoSize = True
+        Me.rbPayPal.Location = New System.Drawing.Point(126, 345)
+        Me.rbPayPal.Name = "rbPayPal"
+        Me.rbPayPal.Size = New System.Drawing.Size(81, 17)
+        Me.rbPayPal.TabIndex = 31
+        Me.rbPayPal.TabStop = True
+        Me.rbPayPal.Text = "PayPal.com"
+        Me.rbPayPal.UseVisualStyleBackColor = True
+        '
+        'rb_ePay
+        '
+        Me.rb_ePay.AutoSize = True
+        Me.rb_ePay.Location = New System.Drawing.Point(126, 368)
+        Me.rb_ePay.Name = "rb_ePay"
+        Me.rb_ePay.Size = New System.Drawing.Size(64, 17)
+        Me.rb_ePay.TabIndex = 32
+        Me.rb_ePay.TabStop = True
+        Me.rb_ePay.Text = "ePay.bg"
+        Me.rb_ePay.UseVisualStyleBackColor = True
+        '
         'frmTouristAgency
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -415,9 +442,9 @@ Partial Class frmTouristAgency
     Friend WithEvents lblSurname As System.Windows.Forms.Label
     Friend WithEvents lblName As System.Windows.Forms.Label
     Friend WithEvents btnAdd As System.Windows.Forms.Button
-    Friend WithEvents rbAmazonPay As System.Windows.Forms.RadioButton
-    Friend WithEvents rbGoogleWallet As System.Windows.Forms.RadioButton
-    Friend WithEvents rbPaypal As System.Windows.Forms.RadioButton
+    Friend WithEvents rbBankAccount As System.Windows.Forms.RadioButton
+    Friend WithEvents rbCard As System.Windows.Forms.RadioButton
+    Friend WithEvents rbCash As System.Windows.Forms.RadioButton
     Friend WithEvents lblDestinationInfoRez As System.Windows.Forms.Label
     Friend WithEvents lblPaymentOption As System.Windows.Forms.Label
     Friend WithEvents txtPhone As System.Windows.Forms.MaskedTextBox
@@ -431,5 +458,7 @@ Partial Class frmTouristAgency
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents rb_ePay As System.Windows.Forms.RadioButton
+    Friend WithEvents rbPayPal As System.Windows.Forms.RadioButton
 
 End Class

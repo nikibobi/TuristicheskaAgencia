@@ -9,6 +9,7 @@
     Dim Price(40) As Double
     Dim Discount As Double
     Dim DaysRez As Integer
+    Dim PaymentOption As String
 
     Dim K As Integer
     Dim I As Integer
@@ -379,10 +380,26 @@
         ElseIf numReservations.Value >= 2 Then
             Discount = 0.05
         Else
-            Discount = 1
+            Discount = 0
         End If
 
         lblPrice.Text = String.Format("Цена: {1:c}{0}Отстъпка:{2}%{0}Крайна Цена:{3:c}{0}", vbNewLine, Price(I) * numReservations.Value, Discount * 100, Price(I) * numReservations.Value - (Price(I) * numReservations.Value * Discount))
+
+        If rb_ePay.Checked = True Then
+            PaymentOption = "еPay.bg"
+        ElseIf rbBankAccount.Checked = True Then
+            PaymentOption = "По банкв път"
+        ElseIf rbCard.Checked = True Then
+            PaymentOption = "С банкова карта"
+        ElseIf rbCash.Checked = True Then
+            PaymentOption = "в брой"
+        ElseIf rbPayPal.Checked = True Then
+            PaymentOption = "PayPal.com"
+        End If
+
+        FileOpen(1, "..\reservations.txt", OpenMode.Output)
+        Print(1, String.Format("Име:{1}{0}Фамилия:{2}{0}Телефон:{3}{0}Адрес:{4}{0}Дестинация:{5}{0}Описание:{6}{0}Начална дата:{7}{0}Продължителност:{8}{0}Крайна дата:{9}{0}Брой ресервации:{10}{0}Начин на плащане:{11}{0}", vbNewLine, txtName.Text, txtSurname.Text, txtPhone.Text, txtAdress.Text, cmbDestinationRez.Text, Description(I), dtpStartDate.Text, numDurations.Value, lblEndDate.Text, numReservations.Value, PaymentOption))
+        FileClose(1)
     End Sub
 
     Private Sub cmbContinentRez_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbContinentRez.SelectedIndexChanged
@@ -401,7 +418,10 @@
                 I = n
             End If
         Next
-        lblDestinationInfoRez.Text = String.Format("Описание: {1}{0}Начална дата: {2:d}{0}Вид транспорт: {3}{0}Цена за транспорт: {4:c}", vbNewLine, Description(I), DateBegin(I), Transport(I), Price(I))
+        lblDestinationInfoRez.Text = String.Format("Описание: {1}{0}Начална дата: {2:d}{0}Вид " & _
+                                                   "транспорт: {3}{0}Цена за транспорт: {4:c}", _
+                                                   vbNewLine, Description(I), DateBegin(I), Transport(I), _
+                                                   Price(I))
     End Sub
 
     Private Sub CalcDuration()
