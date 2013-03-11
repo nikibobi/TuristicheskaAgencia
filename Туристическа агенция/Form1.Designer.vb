@@ -102,9 +102,8 @@ Partial Class frmTouristAgency
         Me.lblResult.AutoSize = True
         Me.lblResult.Location = New System.Drawing.Point(37, 104)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(39, 13)
+        Me.lblResult.Size = New System.Drawing.Size(0, 13)
         Me.lblResult.TabIndex = 2
-        Me.lblResult.Text = "Label1"
         '
         'cmbDestination
         '
@@ -167,9 +166,8 @@ Partial Class frmTouristAgency
         Me.lblPrice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblPrice.Location = New System.Drawing.Point(249, 345)
         Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(45, 13)
+        Me.lblPrice.Size = New System.Drawing.Size(0, 13)
         Me.lblPrice.TabIndex = 0
-        Me.lblPrice.Text = "Label1"
         '
         'Label4
         '
@@ -227,9 +225,8 @@ Partial Class frmTouristAgency
         Me.lblEndDate.AutoSize = True
         Me.lblEndDate.Location = New System.Drawing.Point(338, 248)
         Me.lblEndDate.Name = "lblEndDate"
-        Me.lblEndDate.Size = New System.Drawing.Size(39, 13)
+        Me.lblEndDate.Size = New System.Drawing.Size(0, 13)
         Me.lblEndDate.TabIndex = 21
-        Me.lblEndDate.Text = "Label1"
         '
         'txtPhone
         '
@@ -245,9 +242,8 @@ Partial Class frmTouristAgency
         Me.lblDestinationInfoRez.AutoSize = True
         Me.lblDestinationInfoRez.Location = New System.Drawing.Point(23, 158)
         Me.lblDestinationInfoRez.Name = "lblDestinationInfoRez"
-        Me.lblDestinationInfoRez.Size = New System.Drawing.Size(39, 13)
+        Me.lblDestinationInfoRez.Size = New System.Drawing.Size(0, 13)
         Me.lblDestinationInfoRez.TabIndex = 17
-        Me.lblDestinationInfoRez.Text = "Label2"
         '
         'lblPaymentOption
         '
