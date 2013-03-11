@@ -31,6 +31,11 @@ Partial Class frmTouristAgency
         Me.cmbContinent = New System.Windows.Forms.ComboBox()
         Me.tpReservations = New System.Windows.Forms.TabPage()
         Me.lblPrice = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.numReservations = New System.Windows.Forms.NumericUpDown()
+        Me.numDurations = New System.Windows.Forms.NumericUpDown()
+        Me.dtpStartDate = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblEndDate = New System.Windows.Forms.Label()
         Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
@@ -49,16 +54,12 @@ Partial Class frmTouristAgency
         Me.lblPhone = New System.Windows.Forms.Label()
         Me.lblSurname = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
-        Me.dtpStartDate = New System.Windows.Forms.DateTimePicker()
-        Me.numDurations = New System.Windows.Forms.NumericUpDown()
-        Me.numReservations = New System.Windows.Forms.NumericUpDown()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tpTrips.SuspendLayout()
         Me.tpReservations.SuspendLayout()
-        CType(Me.numDurations, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numReservations, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numDurations, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -122,6 +123,7 @@ Partial Class frmTouristAgency
         '
         'tpReservations
         '
+        Me.tpReservations.Controls.Add(Me.Label5)
         Me.tpReservations.Controls.Add(Me.lblPrice)
         Me.tpReservations.Controls.Add(Me.Label4)
         Me.tpReservations.Controls.Add(Me.Label1)
@@ -165,6 +167,47 @@ Partial Class frmTouristAgency
         Me.lblPrice.TabIndex = 0
         Me.lblPrice.Text = "Label1"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label4.Location = New System.Drawing.Point(23, 230)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(219, 13)
+        Me.Label4.TabIndex = 29
+        Me.Label4.Text = "Изберете начална дата и брой дни:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label1.Location = New System.Drawing.Point(23, 290)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(114, 13)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "Брой резервации:"
+        '
+        'numReservations
+        '
+        Me.numReservations.Location = New System.Drawing.Point(143, 288)
+        Me.numReservations.Name = "numReservations"
+        Me.numReservations.Size = New System.Drawing.Size(60, 20)
+        Me.numReservations.TabIndex = 27
+        '
+        'numDurations
+        '
+        Me.numDurations.Location = New System.Drawing.Point(187, 246)
+        Me.numDurations.Name = "numDurations"
+        Me.numDurations.Size = New System.Drawing.Size(86, 20)
+        Me.numDurations.TabIndex = 26
+        '
+        'dtpStartDate
+        '
+        Me.dtpStartDate.Location = New System.Drawing.Point(26, 246)
+        Me.dtpStartDate.Name = "dtpStartDate"
+        Me.dtpStartDate.Size = New System.Drawing.Size(155, 20)
+        Me.dtpStartDate.TabIndex = 25
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -178,7 +221,7 @@ Partial Class frmTouristAgency
         'lblEndDate
         '
         Me.lblEndDate.AutoSize = True
-        Me.lblEndDate.Location = New System.Drawing.Point(23, 269)
+        Me.lblEndDate.Location = New System.Drawing.Point(338, 248)
         Me.lblEndDate.Name = "lblEndDate"
         Me.lblEndDate.Size = New System.Drawing.Size(39, 13)
         Me.lblEndDate.TabIndex = 21
@@ -326,46 +369,15 @@ Partial Class frmTouristAgency
         Me.lblName.TabIndex = 0
         Me.lblName.Text = "Име"
         '
-        'dtpStartDate
+        'Label5
         '
-        Me.dtpStartDate.Location = New System.Drawing.Point(26, 246)
-        Me.dtpStartDate.Name = "dtpStartDate"
-        Me.dtpStartDate.Size = New System.Drawing.Size(200, 20)
-        Me.dtpStartDate.TabIndex = 25
-        '
-        'numDurations
-        '
-        Me.numDurations.Location = New System.Drawing.Point(287, 246)
-        Me.numDurations.Name = "numDurations"
-        Me.numDurations.Size = New System.Drawing.Size(120, 20)
-        Me.numDurations.TabIndex = 26
-        '
-        'numReservations
-        '
-        Me.numReservations.Location = New System.Drawing.Point(26, 306)
-        Me.numReservations.Name = "numReservations"
-        Me.numReservations.Size = New System.Drawing.Size(120, 20)
-        Me.numReservations.TabIndex = 27
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label1.Location = New System.Drawing.Point(23, 290)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 13)
-        Me.Label1.TabIndex = 28
-        Me.Label1.Text = "Брой резервации:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label4.Location = New System.Drawing.Point(23, 230)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(219, 13)
-        Me.Label4.TabIndex = 29
-        Me.Label4.Text = "Изберете начална дата и брой дни:"
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label5.Location = New System.Drawing.Point(320, 230)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(75, 13)
+        Me.Label5.TabIndex = 30
+        Me.Label5.Text = "(крайна дата)"
         '
         'frmTouristAgency
         '
@@ -382,8 +394,8 @@ Partial Class frmTouristAgency
         Me.tpTrips.PerformLayout()
         Me.tpReservations.ResumeLayout(False)
         Me.tpReservations.PerformLayout()
-        CType(Me.numDurations, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numReservations, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numDurations, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -418,5 +430,6 @@ Partial Class frmTouristAgency
     Friend WithEvents numDurations As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 
 End Class

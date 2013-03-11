@@ -1,5 +1,4 @@
 ﻿Public Class frmTouristAgency
-    'ekskurzii
     Dim Continent(40) As String
     Dim Country(40) As String
     Dim Description(40) As String
@@ -13,7 +12,6 @@
 
     Dim K As Integer
     Dim I As Integer
-    'rezervacii
 
     Private Sub frmTouristAgency_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         InitArrays()
@@ -21,6 +19,7 @@
         I = 0
         cmbContinent.SelectedIndex = 0
         cmbContinentRez.SelectedIndex = 0
+        dtpStartDate.MinDate = DateTime.Now + New TimeSpan(3, 0, 0, 0)
     End Sub
 
     Private Sub InitArrays()
@@ -403,5 +402,17 @@
             End If
         Next
         lblDestinationInfoRez.Text = String.Format("Описание: {1}{0}Начална дата: {2:d}{0}Вид транспорт: {3}{0}Цена за транспорт: {4:c}", vbNewLine, Description(I), DateBegin(I), Transport(I), Price(I))
+    End Sub
+
+    Private Sub CalcDuration()
+        lblEndDate.Text = String.Format("{0:d}", dtpStartDate.Value + New TimeSpan(numDurations.Value, 0, 0, 0))
+    End Sub
+
+    Private Sub numDurations_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles numDurations.ValueChanged
+        CalcDuration()
+    End Sub
+
+    Private Sub dtpStartDate_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpStartDate.ValueChanged
+        CalcDuration()
     End Sub
 End Class
