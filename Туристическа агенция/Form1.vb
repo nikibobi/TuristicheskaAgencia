@@ -8,7 +8,6 @@
     Dim Transport(40) As String
     Dim Price(40) As Double
     Dim Discount As Double
-    Dim DaysRez As Integer
     Dim PaymentOption As String
 
     Dim K As Integer
